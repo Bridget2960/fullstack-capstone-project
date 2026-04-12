@@ -20,10 +20,9 @@ connectToDatabase().then(() => {
 app.use(express.json());
 
 // Route files
-// Gift API Task 1: import the giftRoutes
-const giftRoutes = require('./routes/giftRoutes'); 
+const giftRoutes = require('./routes/giftRoutes');
 
-// Search API Task 1: import the searchRoutes (You'll likely use this in the next lab)
+// Search API Task 1: import the searchRoutes
 const searchRoutes = require('./routes/searchRoutes');
 
 
@@ -33,7 +32,6 @@ const logger = require('./logger');
 app.use(pinoHttp({ logger }));
 
 // Use Routes
-// Gift API Task 2: add the giftRoutes to the server
 app.use('/api/gifts', giftRoutes);
 
 // Search API Task 2: add the searchRoutes to the server
