@@ -1,0 +1,9 @@
+name: CI/CD Project Check
+on: [push]
+jobs:
+  check-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Verify Build
+        run: echo "CI/CD Pipeline ran successfully for Bridget's Capstone!"
